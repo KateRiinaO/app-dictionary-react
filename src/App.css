@@ -1,3 +1,9 @@
+.App {
+  max-width: 1000px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
 .App header {
   margin-top: 100px;
 }
@@ -5,7 +11,10 @@
   text-align: center;
 }
 .App .logo {
-  max-width: 600px;
+  max-width: 1000px;
   display: block;
   margin: 0 auto;
+}
+.App .footer {
+  text-align: center;
 }
