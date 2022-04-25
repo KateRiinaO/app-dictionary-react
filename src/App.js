@@ -12,7 +12,8 @@ export default function App() {
             src={logo}
             alt="logo-katerina-orrava"
             className="logo img-fluid"
-          />
+          />{" "}
+          <h1> DICTIONARY </h1>
         </header>
         <main>
           <Dictionary />
