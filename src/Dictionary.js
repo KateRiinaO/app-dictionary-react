@@ -8,8 +8,10 @@ export default function Dictionary() {
   //what we get from the api call
   function handleResponse(response) {
     console.log(response);
+    alert(`The definition of ${keyword} is ...}`);
   }
 
+  //https://dictionaryapi.dev/
   //reads inserted in form word, alerts it and makes an api call to get the value(in dictionary) of this word
   function search(event) {
     event.preventDefault();
