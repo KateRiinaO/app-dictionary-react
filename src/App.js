@@ -1,4 +1,6 @@
 import "./App.css";
+import React from "react";
+import Dictionary from "./Dictionary";
 import logo from "./logo.png";
 
 export default function App() {
@@ -13,7 +15,10 @@ export default function App() {
             className="logo img-fluid"
           />
         </header>
-        <footer>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="text-center">
           <small className="footer">
             This project was coded by Katerīna Orrava and is open-sourced on{" "}
             <a
