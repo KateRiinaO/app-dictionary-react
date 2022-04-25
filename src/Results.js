@@ -16,10 +16,6 @@ export default function Results(props) {
       </div>
     );
   } else {
-    return (
-      <div className="emptyObject">
-        <p>What word are you looking for? Enter above!</p>
-      </div>
-    );
+    return null;
   }
 }
