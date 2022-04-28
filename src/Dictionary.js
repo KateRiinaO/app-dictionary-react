@@ -18,12 +18,15 @@ export default function Dictionary(props) {
   //https://dictionaryapi.dev/
   //reads inserted in form word and makes an api call to get the value(in dictionary) of this word
   function search(event) {
+    event.preventDefault();
+
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
-
   //making the searched word a variable
   function handleKeywordChange(event) {
+    event.preventDefault();
+
     console.log(event.target.value);
     setKeyword(event.target.value);
   }
@@ -48,7 +51,7 @@ export default function Dictionary(props) {
           </div>
         </form>
         <div className="hint">
-          <small>suggested words: summer, kid, happiness ...</small>
+          <small>suggested words: summer, memory, happiness ...</small>
         </div>
         <Results results={results} />
       </div>
