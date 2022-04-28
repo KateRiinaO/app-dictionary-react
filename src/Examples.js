@@ -5,7 +5,7 @@ export default function Examples(props) {
       <p>
         {" "}
         <em>
-          <strong>Example: </strong>
+          Example:
           {props.examples}
         </em>
       </p>

@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Dictionary from "./Dictionary";
-import logo from "./logo.png";
+import dictionary from "./img/dictionary.jpg";
 
 export default function App() {
   return (
@@ -9,11 +9,11 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <img
-            src={logo}
+            src={dictionary}
             alt="logo-katerina-orrava"
-            className="logo img-fluid"
+            className="dictionary img-fluid"
           />{" "}
-          <h1> DICTIONARY </h1>
+          <h1> What word do you want to look up? </h1>
         </header>
         <main>
           <Dictionary />

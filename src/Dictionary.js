@@ -9,7 +9,6 @@ export default function Dictionary() {
   let [results, setResults] = useState(null);
   //what we get from the api call
   function handleResponse(response) {
-    console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
@@ -41,15 +40,10 @@ export default function Dictionary() {
             />
           </div>
           <div className="col-2">
-            <input
-              type="submit"
-              value="SEARCH"
-              className="btn btn-success w-100"
-            />
+            <input type="submit" value="SEARCH" className="btn w-100" />
           </div>
         </div>
       </form>
-
       <Results results={results} />
     </div>
   );

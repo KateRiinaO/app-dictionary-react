@@ -1,8 +1,8 @@
 .App h1 {
-  text-align: center;
+  text-align: left;
 }
-.App .logo {
-  max-width: 600px;
+.App .dictionary {
+  max-width: 1800px;
   display: block;
   margin: 0 auto;
 }
