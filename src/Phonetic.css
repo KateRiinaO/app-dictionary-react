@@ -11,10 +11,11 @@
   font-weight: bold;
   border-radius: 20px;
   transition: all 150ms ease-in-out;
+  color: #5f544d;
 }
 
 .Phonetic a:hover {
-  background: #9670f4;
+  background: #c6ad9e;
   color: white;
 }
 

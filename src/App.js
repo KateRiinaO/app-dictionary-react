@@ -1,20 +1,12 @@
 import "./App.css";
 import React from "react";
 import Dictionary from "./Dictionary";
-import dictionary from "./img/dictionary.jpg";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">
-          <img
-            src={dictionary}
-            alt="logo-katerina-orrava"
-            className="dictionary img-fluid"
-          />{" "}
-          <h1> What word do you want to look up? </h1>
-        </header>
+        <h1 className="text-center">DICTIONARY</h1>
         <main>
           <Dictionary defaultKeyword="sunset" />
         </main>

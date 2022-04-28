@@ -1,8 +1,22 @@
 .App h1 {
   text-align: left;
+  color: azure;
 }
 .App .dictionary {
   max-width: 1800px;
   display: block;
   margin: 0 auto;
+}
+.App {
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+  padding: 60px 0px 120px;
+}
+.App footer {
+  color: azure;
+}
+.App footer a {
+  color: black;
+  text-decoration: none;
 }
