@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
-export default function Dictionary() {
+export default function Dictionary(props) {
   //needed to "collect data" from the input form
-  let [keyword, setKeyword] = useState("");
+  let [keyword, setKeyword] = useState(props.defaultKeyword);
   //needed to send results to the Results component
   let [results, setResults] = useState(null);
+
+  let [loaded, setLoaded] = useState(false);
+
   //what we get from the api call
   function handleResponse(response) {
     setResults(response.data[0]);
@@ -15,36 +18,43 @@ export default function Dictionary() {
   //https://dictionaryapi.dev/
   //reads inserted in form word and makes an api call to get the value(in dictionary) of this word
   function search(event) {
-    event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   //making the searched word a variable
-  function handleKeyordChange(event) {
+  function handleKeywordChange(event) {
     console.log(event.target.value);
     setKeyword(event.target.value);
   }
+
+  function load() {
+    setLoaded(true);
+    search();
+  }
   //the structure of dictionary
-  return (
-    <div className="Dictionary">
-      <form onSubmit={search}>
-        {" "}
-        <div className="row">
-          <div className="col-10">
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <form onSubmit={search}>
+          {" "}
+          <div className="col">
             <input
               type="search"
               autoFocus={true}
-              onChange={handleKeyordChange}
+              onChange={handleKeywordChange}
               className="form-control"
             />
           </div>
-          <div className="col-2">
-            <input type="submit" value="SEARCH" className="btn w-100" />
-          </div>
+        </form>
+        <div className="hint">
+          <small>suggested words: summer, kid, happiness ...</small>
         </div>
-      </form>
-      <Results results={results} />
-    </div>
-  );
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading ...";
+  }
 }

@@ -8,26 +8,35 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <h2 className="text-uppercase">{props.results.word}</h2>
-        {props.results.phonetics.map(function (phonetic, index) {
-          return (
-            <div key={index}>
-              <PhoneticText phonetic={phonetic} />
-            </div>
-          );
-        })}{" "}
-        {props.results.phonetics.map(function (phonetic, index) {
-          return (
-            <div key={index}>
-              <PhoneticAudio phonetic={phonetic} />
-            </div>
-          );
-        })}
+        <section>
+          <h2 className="text-uppercase">{props.results.word}</h2>
+        </section>
+        <section>
+          {props.results.phonetics.map(function (phonetic, index) {
+            return (
+              <div key={index}>
+                <PhoneticText phonetic={phonetic} />
+              </div>
+            );
+          })}{" "}
+        </section>
+        <section>
+          {" "}
+          {props.results.phonetics.map(function (phonetic, index) {
+            return (
+              <div key={index}>
+                <PhoneticAudio phonetic={phonetic} />
+              </div>
+            );
+          })}
+        </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
-              <Meanings meaning={meaning} />
-            </div>
+            <section>
+              <div key={index}>
+                <Meanings meaning={meaning} />
+              </div>
+            </section>
           );
         })}
       </div>

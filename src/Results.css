@@ -1,6 +1,14 @@
 .Results {
-  background-color: #f8f4f4;
+  margin-top: 20px;
   padding: 10px;
   margin: 10px;
-  border: 2px solid #5e82f0;
+
+  border-radius: 10px;
+}
+section {
+  background-color: whitesmoke;
+  padding: 35px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
 }

@@ -7,3 +7,12 @@
   background-color: #4886f2;
   color: #edf1f9;
 }
+.Dictionary input {
+  width: 100%;
+  padding: 10px 8 px;
+  border: 1px solid #ddd;
+}
+.Dictionary .hint {
+  color: gray;
+  padding: 10px;
+}
