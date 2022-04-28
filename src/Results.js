@@ -1,7 +1,7 @@
 import React from "react";
 import Meanings from "./Meanings";
-import PhoneticText from "./PhoneticText";
-import PhoneticAudio from "./PhoneticAudio";
+import Phonetic from "./Phonetic";
+
 import "./Results.css";
 export default function Results(props) {
   console.log(props.results);
@@ -15,17 +15,7 @@ export default function Results(props) {
           {props.results.phonetics.map(function (phonetic, index) {
             return (
               <div key={index}>
-                <PhoneticText phonetic={phonetic} />
-              </div>
-            );
-          })}{" "}
-        </section>
-        <section>
-          {" "}
-          {props.results.phonetics.map(function (phonetic, index) {
-            return (
-              <div key={index}>
-                <PhoneticAudio phonetic={phonetic} />
+                <Phonetic phonetic={phonetic} />
               </div>
             );
           })}
